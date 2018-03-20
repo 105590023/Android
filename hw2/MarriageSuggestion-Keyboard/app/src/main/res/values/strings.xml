@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HW#2:芮嘉輝</string>
+    <string name="sex">性別(sex)</string>
+    <string name="sex_hint">(Your sex)</string>
+    <string name="age">年齡(age)</string>
+    <string name="age_hint">(Your age)</string>
+    <string name="btn_ok">Submit</string>
+    <string name="suggestion">Suggestion：</string>
+    <string name="sug_not_hurry">Not hurry.</string>
+    <string name="sug_get_married">Get married!</string>
+    <string name="sug_find_couple">Find a couple.</string>
+    <string name="sex_male">male</string>
+</resources>
