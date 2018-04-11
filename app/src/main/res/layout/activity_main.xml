@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="edu.ntut.user.myhw3.MainActivity">
@@ -15,13 +15,31 @@
         android:text="@string/sex"
         android:textSize="18sp" />
 
-    <Spinner
-        android:id="@+id/spnSex"
+    <RadioGroup
+        android:id="@+id/sexBtnGrp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/sex_list"
-        android:prompt="@string/spn_sex_list_promt"
-        android:spinnerMode="dialog" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radBtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/radBtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/female" />
+        </LinearLayout>
+    </RadioGroup>
 
     <TextView
         android:id="@+id/txtAge"
@@ -30,52 +48,113 @@
         android:text="@string/age"
         android:textSize="18sp" />
 
-    <RadioGroup
-        android:id="@+id/radGrpAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange1" />
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange2" />
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange3" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/txtNumber"
+    <Spinner
+        android:id="@+id/maleAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/family"
-        tools:textSize="18sp" />
+        android:entries="@array/maleAgeRange" />
 
-    <TextView
-        android:id="@+id/txtNumFamily"
+    <Spinner
+        android:id="@+id/femaleAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/number" />
+        android:entries="@array/femaleAgeRange" />
 
-    <NumberPicker
-        android:id="@+id/numPkrFamply"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="wrap_content"
+        android:text="@string/txtHobby" />
+
+    <LinearLayout
+        android:id="@+id/hobbyList1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strMusic" />
+
+        <CheckBox
+            android:id="@+id/sing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strSing" />
+
+        <CheckBox
+            android:id="@+id/dance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strDance" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hobbyList2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/travel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strTravel" />
+
+        <CheckBox
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strReading" />
+
+        <CheckBox
+            android:id="@+id/write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strWriting" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hobbyList3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/climb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strClimbing" />
+
+        <CheckBox
+            android:id="@+id/swim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strSwim" />
+
+        <CheckBox
+            android:id="@+id/eat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strEating" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strDrawing" />
 
     <Button
         android:id="@+id/btnOK"
@@ -90,5 +169,11 @@
         android:layout_height="wrap_content"
         android:text="@string/suggestion"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/hobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yourHobby" />
 
 </LinearLayout>
