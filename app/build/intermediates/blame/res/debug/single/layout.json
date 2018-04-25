@@ -16,6 +16,10 @@
         "source": "D:\\Android_Homework\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
     },
     {
+        "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_game_result2.xml",
+        "source": "D:\\Android_Homework\\app\\src\\main\\res\\layout\\fragment_game_result2.xml"
+    },
+    {
         "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "D:\\Android_Homework\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
@@ -92,6 +96,10 @@
         "source": "D:\\Android_Homework\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_main.xml",
+        "source": "D:\\Android_Homework\\app\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
         "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "D:\\Android_Homework\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
@@ -126,6 +134,10 @@
     {
         "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "D:\\Android_Homework\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_game_result.xml",
+        "source": "D:\\Android_Homework\\app\\src\\main\\res\\layout\\fragment_game_result.xml"
     },
     {
         "merged": "D:\\Android_Homework\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",

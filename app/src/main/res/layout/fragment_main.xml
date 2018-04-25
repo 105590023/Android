@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_title"
+        android:textSize="40sp"
+        android:textColor="#FF00FF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <TextView android:id="@+id/txtCom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_com_play"
+        android:layout_below="@id/txtTitle"
+        android:layout_alignLeft="@id/txtTitle"
+        android:textSize="20sp" />
+
+    <TextView android:id="@+id/txtMyPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_my_play"
+        android:layout_below="@id/txtTitle"
+        android:layout_alignRight="@id/txtTitle"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/rollDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnShowResult1"
+        android:layout_alignStart="@+id/btnShowResult1"
+        android:layout_below="@+id/txtCom"
+        android:layout_marginTop="71dp"
+        app:srcCompat="@drawable/dice01" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnShowResult1"
+        android:layout_alignRight="@+id/btnShowResult1"
+        android:layout_below="@+id/rollDice"
+        android:text="@string/result"
+        android:textColor="#0000FF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnShowResult1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnHiddenResult"
+        android:layout_alignEnd="@+id/txtCom"
+        android:layout_alignRight="@+id/txtCom"
+        android:layout_marginBottom="25dp"
+        android:text="@string/btn_show_result1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnShowResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnShowResult1"
+        android:layout_alignBottom="@+id/btnShowResult1"
+        android:layout_alignEnd="@+id/txtMyPlay"
+        android:layout_alignRight="@+id/txtMyPlay"
+        android:text="@string/btn_show_result2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnHiddenResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:text="@string/btn_hidden_result"
+        android:textSize="20sp" />
+
+</RelativeLayout>
