@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">作業七:芮嘉輝</string>
+    <string name="roll_dice">擲骰子</string>
+    <string name="dice_result">點數：</string>
+    <string name="player_win1">點數為1： 玩家勝利</string>
+    <string name="player_win2">點數為2： 玩家勝利</string>
+    <string name="player_draw1">點數為3： 雙方平手</string>
+    <string name="player_draw2">點數為4： 雙方平手</string>
+    <string name="player_lose1">點數為5： 電腦勝利</string>
+    <string name="player_lose2">點數為6： 電腦勝利</string>
+    <string name="error">錯誤發生</string>
+</resources>
