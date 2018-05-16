@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">作業八:芮嘉輝</string>
+    <string name="date_picker_dialog">DatePickerDialog</string>
+    <string name="items">項目:</string>
+    <string name="date">日期:</string>
+    <string name="cost">金額:</string>
+    <string name="input">輸入</string>
+    <string name="record">紀錄</string>
+
+    <string-array name="meal">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+</resources>
