@@ -15,25 +15,33 @@ public class MediaPlayService extends Service{
 
     private MediaPlayer player;
 
-    @Nullable
     @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        player.stop();
+    public void onCreate() {
+        player = MediaPlayer.create(this, R.raw.song);
+        player.setLooping(true);
+        super.onCreate();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Uri uriFile = Uri.fromFile(new File(
-                Environment.getExternalStorageDirectory().getPath() + "/song.mp3"));
-        player = MediaPlayer.create(this, uriFile);
         player.start();
-
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        player.stop();
+        super.onDestroy();
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        return super.onUnbind(intent);
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 }

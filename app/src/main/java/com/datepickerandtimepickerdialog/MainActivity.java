@@ -120,10 +120,12 @@ public class MainActivity extends AppCompatActivity {
     // 選單點擊事件
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        Intent it;
         switch (item.getItemId()){
             case MENU_PLAY_MUSIC:
-                Intent it = new Intent(MainActivity.this, MediaPlayService.class);
+                it = new Intent(MainActivity.this, MediaPlayService.class);
                 startService(it);
+                Toast.makeText(MainActivity.this, "開啟音樂", Toast.LENGTH_SHORT).show();
                 return  true;
 
             case MENU_STOP_MUSIC:
