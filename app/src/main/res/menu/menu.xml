@@ -10,8 +10,10 @@
         app:showAsAction="ifRoom" />
 
     <item
-
         android:id="@+id/add_new_contact"
         android:title="@string/add_new_contact" />
 
+    <item
+        android:id="@+id/deleteData"
+        android:title="@string/del_new_contact" />
 </menu>

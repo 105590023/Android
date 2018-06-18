@@ -1,8 +1,9 @@
-package com.example.zxjte9411.hw10;
+package com.example.zxjte9411.hw11;
 
+import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -17,17 +18,16 @@ import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.SearchView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-
     private final String TAG = "Debug";
-    public static final String DB_FILE = "contact.db", DB_TABLE = "contact";
-    public static SQLiteDatabase sdb;
-    private SectionPageAdapter mSectionPageAdapter;
+    public static ContentResolver mcContentResolver;
+
     private ViewPager mViewPager;
-    private TabLayout mTableLayout;
+
     private AddNewContact addNewContact;
     private SearchContact searchContact;
     @Override
@@ -35,20 +35,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSectionPageAdapter = new SectionPageAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        SectionPageAdapter mSectionPageAdapter = new SectionPageAdapter(getSupportFragmentManager());
+
+        mViewPager = findViewById(R.id.viewPager);
         mViewPager.setAdapter(mSectionPageAdapter);
-        mTableLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+        TabLayout mTableLayout = findViewById(R.id.tabLayout);
         mTableLayout.setupWithViewPager(mViewPager);
         mTableLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                // Close keyboard when user click TabLayout
                 InputMethodManager inputMethodManager = ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE));
-                if(inputMethodManager != null) {
-                    inputMethodManager.hideSoftInputFromWindow(Objects.requireNonNull(MainActivity.this.getCurrentFocus()).getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+                try {
+                    if(inputMethodManager != null) {
+                        inputMethodManager.hideSoftInputFromWindow(Objects.requireNonNull(MainActivity.this.getCurrentFocus()).getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+                    }
                 }
-                //inputMethodManager.hideSoftInputFromWindow(MainActivity.this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);//
+                catch (Exception e){}
+                finally {}
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) { }
@@ -58,24 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         addNewContact = new AddNewContact();
         searchContact = new SearchContact();
-
-        DBOpenHelper contactDBOpenHelper = new DBOpenHelper(getApplicationContext(), DB_FILE, null, 1);
-        sdb = contactDBOpenHelper.getWritableDatabase();
-
-
-        Cursor cursor = sdb.rawQuery("select DISTINCT tbl_name from sqlite_master where tbl_name = '" + DB_TABLE + "'"
-                , null);
-
-        if(cursor != null) {
-            if(cursor.getCount() == 0)	// DB Table not exist, therefore to construct a new one.
-                sdb.execSQL("CREATE TABLE " + DB_TABLE + " (" +
-                        "_id INTEGER PRIMARY KEY," +
-                        "name TEXT NOT NULL," +
-                        "phoneNumber TEXT," +
-                        "phoneType TEXT);");
-
-            cursor.close();
-        }
+        mcContentResolver = getContentResolver();
     }
 
     @Override
@@ -91,18 +78,21 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.d(TAG, "onOptionsItemSelected");
         if (item.getItemId() == R.id.add_new_contact) {
-            if(mViewPager.getCurrentItem()  !=0){
+            if(mViewPager.getCurrentItem() !=0){
                 mViewPager.setCurrentItem(0);
                 return true;
             }
-            ContentValues data = addNewContact.getContentValues();
-            sdb.insert(DB_TABLE, null, data);
-            searchContact.addDataToList(
-                    "Name: " + data.getAsString("name") + "\n" +
-                            "PhoneNumber: " + data.getAsString("phoneNumber") + "\n" +
-                            "PhoneType: " + data.getAsString("phoneType"));
-
-            Toast.makeText(this, "資料已成功加", Toast.LENGTH_SHORT).show();
+            ContentValues newData = addNewContact.getContentValues();
+            mcContentResolver.insert(ConnectionContentProvider.CONTENT_URI, newData);
+            searchContact.updateListData();
+            Toast.makeText(this, "資料增加成功", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        else if(item.getItemId() == R.id.deleteData){
+            mcContentResolver.delete(ConnectionContentProvider.CONTENT_URI,null, null);
+            searchContact.setListHighlight();
+            searchContact.updateListData();
+            Toast.makeText(this, "資料已刪除", Toast.LENGTH_SHORT).show();
             return true;
         }
         else {
@@ -110,40 +100,41 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     private final SearchView.OnQueryTextListener searchView_OnQuery = new SearchView.OnQueryTextListener() {
+        @SuppressLint("Recycle")
         @Override
         public boolean onQueryTextSubmit(String query) {
-            if(mViewPager.getCurrentItem() != 1){
-                mViewPager.setCurrentItem(1);
-            }
             Cursor cursor = null;
             if (!query.equals("")) {
-                cursor = sdb.query(true,
-                        DB_TABLE,
-                        new String[]{"name", "phoneNumber", "phoneType"},
+                cursor = mcContentResolver.query(ConnectionContentProvider.CONTENT_URI,
+                        new String[]{"_id", "name", "phoneNumber", "phoneType"},
                         "name=" + "\"" + query + "\"",
-                        null, null, null, null, null);
+                        null, null);
             }
 
             if (cursor == null)
                 return false;
 
             if (cursor.getCount() == 0) {
-                Toast.makeText(MainActivity.this, "找不到目標資料！", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "找不到目標資料", Toast.LENGTH_LONG).show();
                 searchContact.setListHighlight();
             }
             else {
-                ArrayList<String> dataList = new ArrayList<>();
+                ArrayList<Integer> dataList = new ArrayList<>();
                 cursor.moveToFirst();
                 while(!cursor.isAfterLast()) {
-                    dataList.add(
-                            "Name: " + cursor.getString(0) + "\n" +
-                                    "PhoneNumber: " + cursor.getString(1) + "\n" +
-                                    "PhoneType: " + cursor.getString(2));
+                    dataList.add(cursor.getInt(0));
                     cursor.moveToNext();
                 }
                 searchContact.setListHighlight(dataList);
+                if(mViewPager.getCurrentItem() !=1){
+                    mViewPager.setCurrentItem(1);
+                }
             }
 
             return false;
@@ -153,14 +144,8 @@ public class MainActivity extends AppCompatActivity {
         public boolean onQueryTextChange(String newText) { return false; }
     };
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        sdb.close();
-    }
-
     public class SectionPageAdapter extends FragmentPagerAdapter {
-        public SectionPageAdapter(FragmentManager fm) {
+        SectionPageAdapter(FragmentManager fm) {
             super(fm);
         }
 

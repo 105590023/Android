@@ -1,4 +1,4 @@
-package com.example.zxjte9411.hw10;
+package com.example.zxjte9411.hw11;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.zxjte9411.hw10", appContext.getPackageName());
+        assertEquals("com.example.zxjte9411.hw11", appContext.getPackageName());
     }
 }

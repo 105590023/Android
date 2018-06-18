@@ -1,8 +1,8 @@
-package com.example.zxjte9411.hw10;
-
+package com.example.zxjte9411.hw11;
 
 import android.content.ContentValues;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,37 +12,30 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.Objects;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class AddNewContact extends Fragment {
-
-    private ArrayAdapter<CharSequence> arrayAdapter;
     private Spinner mSpinner;
     private EditText mEditTextName, mEditTextPhoneNumber;
 
-    public AddNewContact() {
-        // Required empty public constructor
-    }
-
+    public AddNewContact() {}
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);}
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_add_new_contact, container, false);
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mSpinner = (Spinner) getView().findViewById(R.id.phoneType);
-        mEditTextName = (EditText) getView().findViewById(R.id.editTextInputName);
-        mEditTextPhoneNumber = (EditText) getView().findViewById(R.id.editText);
-        // spinner setting
-        arrayAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.phone_type,android.R.layout.simple_spinner_dropdown_item);
-        mSpinner.setAdapter(arrayAdapter);
+        mSpinner = Objects.requireNonNull(getView()).findViewById(R.id.phoneType);
+        mEditTextName = getView().findViewById(R.id.editTextInputName);
+        mEditTextPhoneNumber = getView().findViewById(R.id.editText);
+        mSpinner.setAdapter(ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()),R.array.phone_type,android.R.layout.simple_spinner_dropdown_item));
     }
 
     public ContentValues getContentValues() {
@@ -50,6 +43,8 @@ public class AddNewContact extends Fragment {
         newData.put("name", mEditTextName.getText().toString());
         newData.put("phoneNumber", mEditTextPhoneNumber.getText().toString());
         newData.put("phoneType", mSpinner.getSelectedItem().toString());
+        mEditTextName.setText("");
+        mEditTextPhoneNumber.setText("");
         return newData;
     }
 }
