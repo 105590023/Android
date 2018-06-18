@@ -1,15 +1,16 @@
 <resources>
-    <string name="app_name">作業九:芮嘉輝</string>
-    <string name="date_picker_dialog">DatePickerDialog</string>
-    <string name="items">項目:</string>
-    <string name="date">日期:</string>
-    <string name="cost">金額:</string>
-    <string name="input">輸入</string>
-    <string name="record">紀錄</string>
+   <string name="app_name">作業十：芮嘉輝</string>
+    <string name="name">姓名：</string>
+    <string name="input_name">輸入姓名</string>
+    <string name="phone_number">電話號碼：</string>
+    <string name="input_phone_number">輸入電話號碼：</string>
+    <string name="choose_phone_type">選擇電話類型：</string>
+    <string name="add_new_contact">新增</string>
+    <string name="text_search_name">依名字搜尋</string>
 
-    <string-array name="meal">
-        <item>Breakfast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
+    <string-array name="phone_type">
+        <item>手機</item>
+        <item>家裡</item>
+        <item>辦公室</item>
     </string-array>
 </resources>

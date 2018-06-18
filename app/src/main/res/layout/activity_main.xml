@@ -1,118 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.datepickerandtimepickerdialog.MainActivity"
-    android:orientation="vertical"
-    android:id="@+id/myScreen">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <LinearLayout
+<android.support.design.widget.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#33b5e5"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/textViewItems"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/items" />
-
-        <Spinner
-            android:id="@+id/spinnerItem"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/meal" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textViewDate"
-            android:layout_width="5dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/date" />
-
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="286dp"
-        android:orientation="horizontal">
-
-        <DatePicker
-            android:id="@+id/datePicker"
-            android:layout_width="394dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-20dp"
-            android:layout_weight="1"
-            android:calendarViewShown="?android:attr/windowOverscan"
-            android:datePickerMode="spinner" />
-
-        <CalendarView
-            android:id="@+id/calendarView2"
-            android:layout_width="335dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textViewCost"
-            android:layout_width="6dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/cost" />
-
-        <EditText
-            android:id="@+id/editTextCost"
-            android:layout_width="265dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/input" />
-
-        <Button
-            android:id="@+id/btnRecord"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/record" />
-    </LinearLayout>
-
+        <!--<android.support.v4.view.PagerTabStrip-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top"-->
+            <!--android:background="#33b5e5"-->
+            <!--android:paddingBottom="4dp"-->
+            <!--android:paddingTop="4dp"-->
+            <!--android:textColor="#fff"/>-->
 </LinearLayout>
