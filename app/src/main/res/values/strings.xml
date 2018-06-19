@@ -1,25 +1,16 @@
 <resources>
-    <string name="app_name">作業十一：芮嘉輝</string>
-    <string name="name">姓名：</string>
-    <string name="input_name">輸入姓名</string>
-    <string name="phone_number">電話號碼：</string>
-    <string name="input_phone_number">輸入電話號碼：</string>
-    <string name="choose_phone_type">請選擇電話類型</string>
-    <string name="add_new_contact">新增聯絡人</string>
-    <string name="del_new_contact">刪除聯絡人</string>
-    <string name="text_search_name">依名字搜尋</string>
 
-    <string-array name="phone_type">
-        <item>手機</item>
-        <item>家裡</item>
-        <item>辦公室</item>
-    </string-array>
-    <string name="btn_clear">刪除</string>
-    <string name="btn_submit">新增</string>
-
-
-    <string name="text_name">姓名</string>
-    <string name="text_phone_number">電話號碼</string>
-    <string name="text_phone_number_type">電話類型</string>
+    <string name="app_name">作業四之二：芮嘉輝</string>
+    <string name="action_settings">設定</string>
+    <string name="prompt_com_play">電腦出拳：</string>
+    <string name="prompt_my_play">玩家出拳：</string>
+    <string name="play_scissors">剪刀</string>
+    <string name="play_stone">石頭</string>
+    <string name="play_paper">布</string>
+    <string name="player_win">恭喜，你贏了！</string>
+    <string name="player_lose">很可惜，你輸了！</string>
+    <string name="player_draw">雙方平手！</string>
+    <string name="prompt_title">作業四之二：芮嘉輝</string>
+    <string name="result">判定輸贏：</string>
 
 </resources>
