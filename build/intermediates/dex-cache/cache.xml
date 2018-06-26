@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.1.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="182370a4a0bba7903c6ff2cb7b6ac21ca4a4bf89">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.1.2_e5334eaa459eb015186c402583f6b831aef02fe5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_7bc5f4241883c33fa878fcc89680cf7192331c43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-Wechat-Moments-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a8357a3810c2e5bbb6274042a1508bac87759c5f">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.7.10_0efd24ecacb1719bd864a93a0bf65f609de24f56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-SinaWeibo-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="52574245a489f42699687ba9038c8c803a8e8bcf">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.7.10_d35f6c05c617eec1da661c99c28ce841d67a2669.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.0_17c70b1c62d48d2e7da93fee8972358bc4baa92b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_2bec71635358600f63f7ca70bb4a41366de8f7c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.0_d5c3836409dd589c1e6ef809518c0aa0956e8eb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\android\wuziqi\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e9b32107d927687e21151fc187c815cd41ce1407">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\android-wuziqi-unspecified_e0900ce374118266942a022c52db37fccc1ef350.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\MiStats_SDK_Client_1_8_0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1a78aa6fdfe1cea91ad169e38a2e932a5a1d498a">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\MiStats_SDK_Client_1_8_0_50fb5c285b582313455a475885522c7a55fe755a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JamesRui\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.0_00b26df5db4aa600c6a31c6d82c51ff6ddfd96e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.0_3496daf7375a7150c6cec580c2c920a8e072207e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_2d9b50d9dd0f88ae662f2de3e74955392d84f610.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\MobCommons-2016.1107.1809.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="978446ee83b82106e7d859832e4e3440101bda5a">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\MobCommons-2016.1107.1809_bd521ae0bdff2ba60ae5d833310e6d70380ce46c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.0_0c70558ddfaed8afe5297e70c4633a260c70b339.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_b7f4577d34066c9098d501c0fd6688a6a5d2ea67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JamesRui\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.1.2\bfc967828daffc35ba01c9ee204d98b664930a0f\constraint-layout-solver-1.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bfc967828daffc35ba01c9ee204d98b664930a0f">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.1.2_babac8a0a1fb75a0fbf48d8470e3ca571a919a10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-Wechat-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9e12f2d8a6f01dce27c65ce3b93bccd46e7ffd4">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.7.10_c835102aef4dcc393e2addce5c3de2a595e99852.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.0_0601892acf0075925eee70c75bee44b993924c25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-QZone-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="158eb0f8525584008bfc92c2c6a4841174133a0a">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.7.10_d9f83e75e2a042323647cf885c14fe9a637eb870.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-Core-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a7e5f9da3635eb8d89b8a9a22cd68cd64cca9104">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.7.10_e6c8ec7d58b3efae4ea00caaf18eec174e1b79b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-Wechat-Core-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a720ef31ac89904b603fb2a27c01bb21a951fcad">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.7.10_6b19ba0d40d9f8b5914a5402b9b424527e56071d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_e25caad1b960e63f5d24334ee7d127b98a2ba004.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.0_b57f2cf5074cacb980fc8b9162a7aa6702f12890.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.0_08249ebd1c99b00d2bb30ca8da21cb9dc18d8bd9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_635471580f15272a18b5faef61d489464caed2e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\ShareSDK-QQ-2.7.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5d3ffc9c4c2743fcc83b3333f77fc252fb146889">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.7.10_6c24109afc5462e129724944c43cb3203d0a01d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.0_1a5e91f31dde52307c92a6d4e84d634572e4bc25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\app\libs\MobTools-2016.1107.1809.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="51ab3d9199c3df198ba8fedb2916027f283676d6">
+        <dex dex="D:\android\app\build\intermediates\pre-dexed\debug\MobTools-2016.1107.1809_cad08588cea9a90ffe249b71f4278da9fd811822.jar" />
+    </item>
+
+</items>

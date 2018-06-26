@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.codekong.wuzilianzhu.WelcomeActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/id_start_game"
+        android:layout_width="174dp"
+        android:layout_height="101dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:text="@string/str_start_game"
+        android:textSize="24sp" />
+
+</LinearLayout>

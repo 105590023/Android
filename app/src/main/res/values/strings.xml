@@ -1,15 +1,13 @@
 <resources>
-    <string name="app_name">作業八:芮嘉輝</string>
-    <string name="date_picker_dialog">DatePickerDialog</string>
-    <string name="items">項目:</string>
-    <string name="date">日期:</string>
-    <string name="cost">金額:</string>
-    <string name="input">輸入</string>
-    <string name="record">紀錄</string>
-
-    <string-array name="meal">
-        <item>Breakfast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
-    </string-array>
+    <string name="app_name">Android期末 芮嘉輝：五子棋</string>
+    <string name="str_start_game">開始遊戲</string>
+    <string name="str_white_piece">白棋</string>
+    <string name="str_black_piece">黑棋</string>
+    <string name="str_first_piece">先攻</string>
+    <string name="str_white_piece_victory">白棋勝利</string>
+    <string name="str_black_piece_victory">黑棋勝利</string>
+    <string name="str_game_over">結束</string>
+    <string name="str_restart_game">再玩一次</string>
+    <string name="str_game_rule">遊戲規則</string>
+    <string name="str_share_game">分享遊戲</string>
 </resources>
